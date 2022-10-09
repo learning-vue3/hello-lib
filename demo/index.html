@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Demo</title>
+  </head>
+  <body>
+    <script src="../dist/index.min.js"></script>
+    <script>
+      /**
+       * UMD 规范的文件会有一个全局变量
+       * 由 vite.config.ts 的 `build.lib.name` 决定
+       */
+      console.log(hello)
+
+      /**
+       * 所有的方法会挂在这个全局变量上
+       * 类似于 jQuery 的 $.xxx() 那样使用
+       */
+      const num = hello.getRandomNumber()
+      console.log(num)
+    </script>
+  </body>
+</html>
